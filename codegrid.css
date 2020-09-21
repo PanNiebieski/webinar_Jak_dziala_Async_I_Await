@@ -1,0 +1,361 @@
+
+.module-grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 40% 50%;
+
+    grid-template-areas: "module-CodeModule module-HeaderText" "module-CodeModule module-Question" 
+    "module-CodeMain module-Answer" ;
+  }
+  
+  .module-CodeModule { grid-area: module-CodeModule; border-bottom: 5px solid green;   border-right: 25px solid green;    background-color: whitesmoke ;
+  }
+
+    .module-CodeMain { grid-area: module-CodeMain;      border-right: 25px solid green;  background-color: whitesmoke ;
+ }
+  
+        .module-CodeModule pre ,   .module-CodeMain pre {
+            padding: 0px !important;;
+            padding-top: 20px !important;
+            padding-left: 30px !important;
+        }
+
+
+  .module-HeaderText { grid-area: module-HeaderText;     background-color: #505363; 
+    height: 100%; display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid green; 
+    border-bottom: 5px solid green;
+} 
+  
+.module-HeaderText h2{
+    font-size: 18px !important;;
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+   
+   
+}
+
+.headerCODE {
+    color: rgb(0, 183, 255) !important;
+}
+
+  .module-Question { grid-area: module-Question;
+display: flex;
+    align-items: center;
+    justify-content: center; color:white;   background-color: #505363; 
+    border-bottom: 5px solid green; 
+
+
+}
+  
+  .module-Answer { grid-area: module-Answer;  background-color: #505363; }
+
+
+.slide.prism.over {
+    padding: 0 0px 0 !important;
+}
+
+.slide h2 { 
+    color: rgb(0, 183, 255);
+}
+
+.vertical-grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 20% 70%;
+    height: 100%;
+   grid-template-areas: "vertical-PlaceCodeHere vertical-HeaderText "
+   "vertical-PlaceCodeHere vertical-Question" 
+   "vertical-PlaceCodeHere vertical-Answer"
+  }
+  
+  .vertical-PlaceCodeHere { grid-area: vertical-PlaceCodeHere;   border-right: 5px solid rgb(0, 183, 255);
+    background-color: whitesmoke ;
+    display: flex;
+    align-items: center; }
+  
+  .vertical-HeaderText { 
+      grid-area: vertical-HeaderText;  
+   
+    background-color: #505363; 
+    height: 100%; display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid rgb(0, 183, 255);
+}
+
+    .vertical-HeaderText h2{
+        font-size: 18px !important;;
+        padding-top: 8px !important;
+        padding-bottom: 7px !important;
+        color: rgb(0, 183, 255) !important;
+       
+    }
+  
+  .vertical-Question {    display: flex;
+    align-items: center;
+    justify-content: center; grid-area: vertical-Question; color:white;   background-color: #505363; 
+    border-bottom: 5px solid rgb(0, 183, 255);
+}
+  
+  .vertical-Answer { grid-area: vertical-Answer; background-color: #505363; }
+  .vertical-Answer pre  {
+
+  }
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 70% 25% ;
+
+    grid-template-areas: "HeaderTitle" "PlaceCodeHere" "AnswerCode" ;
+  }
+
+  .HeaderTitle { 
+    padding-left: 10px;
+    grid-area: HeaderTitle;
+    background-color: #505363;
+
+}
+.HeaderTitle  h2 {
+    font-size: 12px !important;;
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+    color: rgb(0, 183, 255) !important;
+    background-color: transparent;
+    border: none;
+}
+  .PlaceCodeHere { grid-area: PlaceCodeHere; 
+
+    border-top: 5px solid rgb(0, 183, 255);
+    background-color: whitesmoke ;
+    display: flex;
+    align-items: center;
+}
+
+.PlaceCodeHere pre{
+padding-top: 1em !important;
+
+}
+
+.AnswerCode {
+    display: grid;
+
+    grid-template-areas: "pytanie" "odpowiedz";
+    grid-area: AnswerCode;
+    border-top: 5px solid rgb(0, 183, 255);
+    background-color: #505363;
+    color:white;
+  }
+.pytanie {
+    padding-top: 5px;
+    padding-bottom: 5px;;
+    grid-area: pytanie;
+    padding-left: 30px;;
+    
+}
+.odpowiedz {
+    grid-area: odpowiedz;
+    margin-left: 30px;;
+    margin-bottom: 20px;;
+    
+}
+
+.odpowiedz.full {
+    background-color: whitesmoke;
+    padding-left: 30px;
+    color: #07a;
+}
+
+.AnswerCode pre,.AnswerCode2 pre{
+
+    border-left: 30px solid rgb(0, 183, 255);
+    font-size: 30px;overflow: hidden; background-color: white;   
+}
+
+.odpowiedz pre, .odpowiedz2 pre{
+    width: 90%;
+    font-size: 30px;overflow: hidden; background-color: white;  
+}
+
+.odpowiedz pre code, .odpowiedz2 pre code{
+
+    line-height: 13px !important;padding-top: 15px; color: rgb(0, 183, 255) !important;
+   
+}
+
+.AnswerCode h3,.AnswerCode2 h3{
+    font-size: 27px;;
+}
+
+
+.Place {
+    background-color: #505363;
+    grid-area: Place; 
+
+}
+
+
+.bhgry {
+    background-color: #818487;
+}
+
+.Main-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 50% 25%;
+    width: 100%;
+    height: 100%;
+   grid-template-areas: "Background1" "Main-Text" "Background2"
+  }
+  
+  .Main-Text { grid-area: Main-Text; display: flex;  justify-content: center;  align-items: center; }
+  
+  .Main-Text  h2 {
+      color: white !important;
+      text-align: center;
+      padding: 0px !important;;
+  }
+
+  .Main-Text a {
+      color: rgb(0, 183, 255);
+      font-size: 150%;;
+      text-decoration: none !important;
+  }
+
+  .Main-Background1 {     border-bottom: 5px solid rgb(0, 183, 255);    background-color: #505363; }
+  
+  .Main-Background2 {     border-top: 5px solid rgb(0, 183, 255);  background-color: #505363; }
+
+
+
+
+
+
+
+
+
+.grid-container2 {
+    height: 100%;
+}
+
+
+
+  
+.module-grid-container2 {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 80% 10%;
+
+    grid-template-areas: "module-CodeModule2 module-HeaderText2" "module-CodeModule2 module-Question2" 
+    "module-CodeMain2 module-Answer2" ;
+  }
+  
+  .module-CodeModule2 { grid-area: module-CodeModule2; border-bottom: 5px solid green;   border-right: 25px solid green;    background-color: whitesmoke ;
+  }
+
+    .module-CodeMain2 { grid-area: module-CodeMain2;      border-right: 25px solid green;  background-color: whitesmoke ;
+ }
+  
+        .module-CodeModule2 pre ,   .module-CodeMain pre {
+            padding: 0px !important;;
+            padding-top: 20px !important;
+            padding-left: 30px !important;
+        }
+
+
+  .module-HeaderText2 { grid-area: module-HeaderText2;     background-color: #505363; 
+    height: 100%; display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid green; 
+    border-bottom: 5px solid green;
+} 
+  
+.module-HeaderText2 h2{
+    font-size: 18px !important;;
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+   
+   
+}
+
+.headerCODE2 {
+    color: rgb(0, 183, 255) !important;
+}
+
+  .module-Question2 { grid-area: module-Question2;
+display: flex;
+    align-items: center;
+    justify-content: center; color:white;   background-color: #505363; 
+    border-bottom: 5px solid green; 
+
+
+}
+  
+  .module-Answer2 { grid-area: module-Answer2;  background-color: #505363; }
+
+  .AnswerCode2 {
+    display: grid;
+    height: 10%;
+    grid-template-areas: "pytanie2" "odpowiedz2";
+    grid-area: AnswerCode2;
+    border-top: 5px solid rgb(0, 183, 255);
+    background-color: #505363;
+    color:white;
+  }
+.pytanie2 {
+    padding-top: 5px;
+    padding-bottom: 5px;;
+    grid-area: pytanie;
+    padding-left: 30px;;
+    
+}
+.odpowiedz2 {
+    grid-area: odpowiedz;
+    margin-left: 30px;;
+    margin-bottom: 20px;;
+    
+}
+
+.grid-containe2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 70% 25% ;
+
+    grid-template-areas: "HeaderTitle2" "PlaceCodeHere2" "AnswerCode2" ;
+  }
+
+  .HeaderTitle2 { 
+    padding-left: 10px;
+    grid-area: HeaderTitle;
+    background-color: #505363;
+
+}
+.HeaderTitle2  h2 {
+    font-size: 12px !important;;
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+    color: rgb(0, 183, 255) !important;
+    background-color: transparent;
+    border: none;
+}
+
+.PlaceCodeHere2 { grid-area: PlaceCodeHere2; 
+    height: 90%;
+    border-top: 5px solid rgb(0, 183, 255);
+    background-color: whitesmoke ;
+    display: flex;
+    align-items: center;
+}
+
+.PlaceCodeHere2 pre{
+padding-top: 1em !important;
+
+}
